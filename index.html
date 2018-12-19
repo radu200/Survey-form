@@ -1,0 +1,122 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- Ensures proper rendering and touch zooming -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Forces IE 8/9/10 to use its latest rendering engine -->
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Survey Form</title>
+  <!-- Ensures proper rendering and touch zooming -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Provides a responsive, fixed-width container. Needed as outermost wrapper in order for Bootstrap grid system to work correctly -->
+  <body class="bg-light">
+
+    <div class="container">
+      <div class="py-5 text-center">
+        <h1 id="title">Survey Form</h1>
+      </div>
+      <div class="row justify-content-center ">
+        <div class="col-md-8 ">
+          <p id="description" class="mb-3">Payment</p>
+          <form id="survey-form" class="needs-validation" validate>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label id="name-label" for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name" value="" required>
+                <div class="invalid-feedback">
+                  Valid name is required.
+                </div>
+              </div>
+              <div  class=" col-md-6 mb-3">
+                <label id="email-label" for="email">Email <span class="text-muted"></span></label>
+                <input id="email"  type="email" class="form-control" placeholder="Enter your email" required>
+                <div class="invalid-feedback">
+                  Please enter a valid email address .
+                </div>
+              </div>
+
+
+              <div class="col-md-12  mb-3">
+                <label id="number-label" for="number">Prome Code</label>
+                <input type="number" class="form-control" id="number" placeholder="Enter prome code" value="" min="1" max="11"
+                  required>
+                <div class="invalid-feedback">
+                  Valid code is required.
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12 mb-3">
+                <label for="country">Country</label>
+                <select id="dropdown" class="custom-select d-block w-100" id="country" required>
+                  <option value="">Choose...</option>
+                  <option>United States</option>
+                  <option>France</option>
+                  <option>Germany</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please select a valid country.
+                </div>
+              </div>
+
+            </div>
+
+            <h4 class="mb-3">Payment</h4>
+
+            <div class="d-block my-3">
+              <div class="custom-control custom-radio">
+                <input  type="radio" class="custom-control-input" name="payMeth"  value="1" checked required>
+                <label class="custom-control-label" for="credit">Credit card</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input   type="radio" class="custom-control-input" name="payMeth" value="2" required>
+                <label class="custom-control-label" for="debit">Debit card</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input  type="radio" class="custom-control-input"  name="payMeth" value="3" required>
+                <label class="custom-control-label" for="paypal">PayPal</label>
+              </div>
+            </div>
+
+            <hr class="mb-4">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="same-address" value="1">
+              <label class="custom-control-label" for="same-address">Shipping address is the same as my billing address</label>
+            </div>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="save-info" value="2">
+              <label class="custom-control-label" for="save-info">Save this information for next time</label>
+            </div>
+            <hr class="mb-4">
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Comment the product in a few words</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+
+            <button class="btn btn-primary btn-lg btn-block" id="submit" type="submit">Continue</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"></script>
+  </body>
+
+</html>
