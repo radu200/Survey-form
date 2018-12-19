@@ -1,2 +1,1 @@
-#Tribute Page
-Freddie mercury Tribute Page
+#Survey form 
